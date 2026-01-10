@@ -42,6 +42,7 @@ CREATE TABLE Billing (
     patient_id VARCHAR(10),
     AppointmentID VARCHAR(10),
     billing_amount DECIMAL(10,2),
+    recovery_status ENUM( "Ready_to_discharge", "Medical_attention_required"),
     payment_status VARCHAR(20),
     payment_date DATE,
     doctor_reg_id VARCHAR(10),
