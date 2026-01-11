@@ -127,10 +127,25 @@ INSERT INTO Patient VALUES
 ('P74','Uma Devi','1988-06-16','Female','Royapuram','9876543274','umadevi@gmail.com'),
 ('P75','Naren','1995-09-01','Male','Washermanpet','9876543275','naren@gmail.com');
 
--- Update patient name to "Arun K" for patient registration ID "P01"
+-- Q1. Update patient name to "Arun K" for patient registration ID "P01"
 update patient
 set patient_name = "Arun K"
 where patient_registration_id = "P01";
+
+-- Q2. Change the address of patients from "Saidapet" to "Guindy"
+update patient
+set address = "Guindy"
+where address = "Saidapet";
+
+-- Q3. Change the mobile number for patient "P10"
+update patient
+set mobile_number = "9003043090"
+where patient_name = "Balaji";
+
+-- Q4. Set address as "Vyasarpadi" for patient named "Karthik"
+update patient
+set address = "Vyasarpadi"
+where patient_name = "Karthik";
 
 
 
