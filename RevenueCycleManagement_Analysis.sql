@@ -147,5 +147,24 @@ update patient
 set address = "Vyasarpadi"
 where patient_name = "Karthik";
 
+-- Q5 Change email domain to outlook.com for Adyar patients
+update patient
+set email_id = REPLACE(email_id, "@gmail.com","@outlook.com")
+where email_id like  "%gmailcom";
+
+-- Q6 change patient_name as Divya and gender as female for the patient patient_registration_id P07
+update patient
+set gender = "Female", patient_name = "Divya"
+where patient_registration_id = "P07";
+
+-- Q6. Set address as Velachery for patients born after 1995
+update patient
+set address = "Velachery"
+where dob >= "1995-01-01";
+
+-- Q7. Update gender as Male for Tambaram patients
+update patient
+set gender = "Male"
+where address = "Tambaram";
 
 
