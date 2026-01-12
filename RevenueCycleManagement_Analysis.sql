@@ -181,4 +181,33 @@ WHERE Email_id IS NULL;
 update patient
 set mobile_number = mobile_number+1;
 
+-- Q11. Set address as Anna Nagar for patients from P20 to P30
+update patient
+set address = "Anna Nagar"
+where patient_registration_id  between "P20" and "P30";
+
+-- 🔹 DELETE – 10 Questions with Answers
+-- Q1. Delete patient record P75
+DELETE From patient
+where patient_registration_id = "P75";
+
+-- Q2. Delete patients from Red Hills
+delete from patient
+where address = "Royapuram";
+
+-- Q3. Delete patients born before 1985
+delete from patient
+where dob <= "1985-01-01";
+
+-- Q4. Delete patients with NULL email
+delete from patient
+where email_id is null;
+
+-- Q5. Delete patients registeration who has the ID P08
+delete from patient
+where patient_registration_id = "P08";
+
+-- Q6. Delete patients from OMR
+DELETE from patient
+where address = "Thiruvanmiyur";
 
