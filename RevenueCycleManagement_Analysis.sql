@@ -167,4 +167,18 @@ update patient
 set gender = "Male"
 where address = "Tambaram";
 
+-- Q8 Update gender as Male for Tambaram patients
+update patient
+set gender = "Female"
+where address = "Tambaram";
+
+-- Q9. Set default email for patients with NULL email
+UPDATE Patient
+SET Email_id = 'default@example.com'
+WHERE Email_id IS NULL;
+
+-- Q10 Increase all patients’ mobile numbers by 1
+update patient
+set mobile_number = mobile_number+1;
+
 
