@@ -345,6 +345,106 @@ where address = "Guindy" or
 	  address = "Anna Nagar";
 
 🔹 NOT – 10 Questions with Answers
+-- Q1. Fetch patients who are NOT from Adyar
+select *
+from patient
+where address != "Adyar";
+
+-- Q2. Fetch patients who are NOT Male
+select *
+from patient
+where gender != "Male";
+
+-- Q3. Fetch patients NOT from Tambaram
+select *
+from patient
+where address != "Tambaram";
+
+-- Q4. Fetch patients whose name is NOT Arun Kumar
+select *
+from patient
+where patient_name != "Arun Kumar";
+
+-- Q5. Fetch patients who do NOT use Gmail
+select *
+from patient
+where email_id not like "%gmail%";
+
+-- Q6. Fetch patients NOT born after 1995
+select *
+from patient
+where dob < "1995-01-01";
+
+-- Q7. Fetch patients whose gender is NOT NULL
+select *
+from patient
+where gender is not NULL;
+
+-- Q8. Fetch patients NOT from Adyar or Guindy
+select *
+from patient
+where address not in ("Adyar","Guindy");
+
+-- Q9. Fetch patients except P10
+select *
+from patient
+where patient_registration_id != "P10";
+
+-- Q10. Fetch patients NOT born between 1990 and 1995
+select *
+from patient
+where dob not between "1990-01-01" and "1995-01-01";
+	  
+-- 🔹 IN – 10 Questions with Answers
+-- Q1. Fetch patients from Adyar and Guindy
+select * 
+from patient
+where address in ("Adyar","Guindy");
+
+-- Q2. Fetch Male and Female patients
+select *
+from patient
+where gender in ("Male","Female");
+
+-- Q3. Fetch patients with registration IDs P01, P05, P10
+select *
+from patient
+where patient_registration_id in ("P01","P05","P10");
+
+-- Q4. Fetch Gmail and Yahoo email users
+select *
+from patient
+where email_id like "%Gmail%" or email_id like "%Yahoo%";
+
+-- Q5. Fetch patients from Velachery and Tambaram
+select *
+from patient
+where address in ("Velachery", "Tambaram");
+
+-- Q6. Fetch patients named Arun, Mohan, or Suresh
+select *
+from patient
+where patient_name in ("Arun","Mohan","Suresh");
+
+-- Q7. Fetch patients from P20 to P25 using IN
+select *
+from patient
+where patient_registration_id in ("P20","P22","P23","P24","P25");
+
+-- Q8. Fetch patients from Anna Nagar and OMR
+select *
+from patient
+where address in ("OMR","Anna Nagar");
+
+-- Q9. Fetch Male patients from selected locations
+select * 
+from patient
+where gender = "Male" and address in ("Vyasarpadi","perambur");
+
+-- Q10. Fetch patients using Gmail or Outlook
+select * 
+from patient
+where email_id  in like ("%Gmail%","%Yahoo%");
 
 
 
