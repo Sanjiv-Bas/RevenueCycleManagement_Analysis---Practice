@@ -222,3 +222,65 @@ delete from patient
 order by patient_registration_id desc
 limit 5;
 
+-- 🔹 AND – 10 Questions with Answers
+-- Q1. Male patients in Adyar
+select *
+from patient
+where address = "Adyar" and 
+	gender = "Male";
+    
+-- Q2. Female patients in Velachery
+select *
+from patient
+where address = "Velachery"
+	and gender = "Female";
+    
+-- Q3. Mohan from Tambaram
+select *
+from patient
+where patient_name = "Mohan"
+	and address = "Tambaram";
+    
+-- Q4. Male patients born after 1990
+select *
+from patient
+where gender = "Male"
+	and dob > "1990-01-01";
+    
+-- Q5. Male patients in Anna Nagar
+select *
+from patient
+where gender = "Male"
+	and address = "Anna Nagar";
+    
+-- Q6. Female Gmail users
+select * 
+from patient
+where gender = "Female"
+	and email_id like "%Gmail%";
+    
+-- Q7. Adyar patients born before 1995
+select *
+from patient
+where address = "Adyar"
+and dob > "1995-01-01";
+
+-- Q8. Male patients from Guindy
+select * 
+from patient
+where gender = "Male"
+      and address = "Guindy";
+
+-- Q9. Suresh Raj from Saidapet
+select *
+from patient
+where patient_name = "Suresh Raj"
+      and address = "Saidapet";
+      
+-- Q10. Male patients in Velachery
+select *
+from patient
+where address = "Velachery"
+	and gender = "Female";
+-
+
