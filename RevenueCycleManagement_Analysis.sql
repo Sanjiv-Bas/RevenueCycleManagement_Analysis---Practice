@@ -282,5 +282,68 @@ select *
 from patient
 where address = "Velachery"
 	and gender = "Female";
--
+
+-- 🔹 OR – 10 Questions with Answers
+-- Q1. Patients from Adyar or Guindy
+select *
+from patient
+where address = "Adyar"
+	or address = "Guindy";
+    
+-- Q2. Patients from Velachery or Tambaram
+select *
+from Patient
+where address = "Velachery" 
+	or address = "Tambaram";
+    
+-- Q3. Arun Kumar or Suresh Raj
+select * 
+from patient
+where patient_name = "Arun kumar"
+	or patient_name = "Suresh Raj";
+    
+-- Q4. Male or Female patients
+select *
+from patient
+where gender = "Male"
+	or gender = "Female";
+    
+-- Q5. Patients from OMR or ECR
+select *
+from patient
+where address = "OMR"
+	or address = "ECR";
+    
+-- Q6. Born before 1990 or after 1995
+select *
+from patient
+where dob < "1990-01-01"
+	or dob > "1995-01-01";
+    
+-- Q7. Gmail or Yahoo users
+select *
+from patient
+where email_id like "%gmail%"
+	or email_id like "%Yahoo%";
+
+-- Q8. Patients from Adyar or Female patients
+select *
+from patient
+where address = "Adyar"
+	or address = "Female";
+    
+-- Q9. Patient P01 or P02
+select *
+from patient
+where patient_registration_id = "P01" or 
+	  patient_registration_id = "P02";
+
+-- Q10. Patients from Guindy or Anna Nagar
+select *
+from patient
+where address = "Guindy" or
+	  address = "Anna Nagar";
+
+🔹 NOT – 10 Questions with Answers
+
 
