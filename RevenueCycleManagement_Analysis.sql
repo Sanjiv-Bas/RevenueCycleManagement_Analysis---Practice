@@ -207,7 +207,18 @@ where email_id is null;
 delete from patient
 where patient_registration_id = "P08";
 
--- Q6. Delete patients from OMR
+-- Q6. Delete patients from Thiruvanmiyur
 DELETE from patient
 where address = "Thiruvanmiyur";
+
+-- Q7. Retrive duplicate patient names (keep one record)
+SELECT patient_name, email_id, COUNT(*) 
+FROM  patient
+GROUP BY patient_name, email_id
+HAVING COUNT(*) > 1;
+
+-- Q8. Delete last 5 inserted patients
+delete from patient
+order by patient_registration_id desc
+limit 5;
 
