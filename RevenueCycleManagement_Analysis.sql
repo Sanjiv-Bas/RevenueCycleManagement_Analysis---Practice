@@ -450,3 +450,56 @@ where email_id in (
     where email_id like "%gmail%" or
 		  email_id like "%outlook%");
 
+-- 🔹 BETWEEN – 10 Questions with Answers
+-- Q1. Fetch patients born between 1990 and 1995
+select * 
+from patient
+where dob > "1990-01-01" and 
+	  dob < "1995-01-01";
+      
+-- Q2. Fetch patients with IDs between P10 and P20
+select *
+from patient
+where patient_registration_id between "P10" and "P20";
+
+-- Q3. Fetch patients born between 1985 and 1990
+select *
+from patient
+where dob between "1985-01-01" and "1990-01-01";
+
+-- Q4. Fetch patients with IDs between P30 and P40
+select *
+from patient
+where patient_registration_id between "P30" and "P40";
+
+-- Q5. Fetch patients born between 1998 and 2002
+select *
+from patient
+where dob > "1998-01-01" and dob < "2002-01-02";
+
+-- Q6. Fetch patients with IDs between P50 and P60
+select *
+from patient
+where patient_registration_id between "P50" and "P60";
+
+-- Q7. Fetch patients born between two given dates
+select *
+from patient
+where dob between "1995-01-01" and "1995-10-01";
+
+-- Q8. Fetch patients from P01 to P10
+select *
+from patient
+where patient_registration_id between "P01" and "P10";
+
+-- Q9. Fetch patients born between 2000 and 2005
+select *
+from patient
+where dob between "1985-01-01" and "1990-01-01";
+
+-- Q10. Fetch mid-range registered patients
+select *
+from patient
+order by cast(substring(patient_registration_id,2) as unsigned)
+limit 30,20;
+
