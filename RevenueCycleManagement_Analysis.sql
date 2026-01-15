@@ -444,7 +444,9 @@ where gender = "Male" and address in ("Vyasarpadi","perambur");
 -- Q10. Fetch patients using Gmail or Outlook
 select * 
 from patient
-where email_id  in like ("%Gmail%","%Yahoo%");
-
-
+where email_id in (
+	select email_id
+    from patient
+    where email_id like "%gmail%" or
+		  email_id like "%outlook%");
 
