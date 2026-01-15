@@ -553,3 +553,5 @@ where email_id like concat("%patient_name%");
 select *
 from patient
 where patient_name like "____%";
+
+
