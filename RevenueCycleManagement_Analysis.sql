@@ -554,4 +554,9 @@ select *
 from patient
 where patient_name like "____%";
 
+-- 🔹 ORDER BY – 10 Questions with Answers
+-- Q1. Order by name
+select * 
+from patient 
+order by patient_name asc;
 
