@@ -544,3 +544,12 @@ select *
 from patient
 where address like "%Nagar";
 
+-- Q9. Fetch patients whose email contains their name
+select *
+from patient
+where email_id like concat("%patient_name%");
+
+-- Q10. Fetch patients whose name length is at least 4 characters
+select *
+from patient
+where patient_name like "____%";
