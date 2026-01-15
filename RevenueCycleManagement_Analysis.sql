@@ -503,3 +503,44 @@ from patient
 order by cast(substring(patient_registration_id,2) as unsigned)
 limit 30,20;
 
+-- 🔹 LIKE – 10 Questions with Answers
+-- Q1. Fetch patients whose name starts with A
+select *
+from patient
+where patient_name like "a%";
+
+-- Q2. Fetch patients whose name ends with n
+select *
+from patient
+where patient_name like "n%";
+
+-- Q3. Fetch patients whose name contains Kumar
+select *
+from patient
+where patient_name like "k%";
+
+-- Q4. Fetch Gmail email users
+select *
+from patient
+where email_id like "%gmail%";
+
+-- Q5. Fetch patients whose address starts with V
+select *
+from patient
+where address like "V%";
+
+-- Q6. Fetch patients whose mobile number starts with 9
+select *
+from patient
+where mobile_number like "9%";
+
+-- Q7. Fetch patients whose second letter in name is 'a'
+select *
+from patient
+where patient_name like "_a%";
+
+-- Q8. Fetch patients whose address contains 'Nagar'
+select *
+from patient
+where address like "%Nagar";
+
