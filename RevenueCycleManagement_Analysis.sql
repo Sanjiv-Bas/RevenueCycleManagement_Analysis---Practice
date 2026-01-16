@@ -555,8 +555,166 @@ from patient
 where patient_name like "____%";
 
 -- 🔹 ORDER BY – 10 Questions with Answers
--- Q1. Order by name
-select * 
-from patient 
+select *
+from patient
+where patient_name like "____%";
+
+select * from patient;
+
+-- 🔹 ORDER BY – 10 Questions with Answers
+-- Q1. Order patients by name (ascending)
+select *
+from patient
 order by patient_name asc;
+
+-- Q2. Order patients by date of birth (latest first)
+select *
+from patient
+order by dob desc;
+
+-- Q3. Order patients by address
+select *
+from patient
+order by address asc;
+
+-- Q4. Order patients by registration ID descending
+select *
+from patient
+order by patient_registration_id desc;
+
+-- Q5. Order patients by gender
+select *
+from patient 
+order by gender asc;
+
+-- Q6. Order by address, then by name
+select * 
+from patient
+order by address, patient_name asc;
+
+-- Q7. Oldest patients first
+select *
+from patient
+order by patient_name asc;
+
+-- Q8. Newest born patients first
+select *
+from patient
+order by patient_name desc;
+
+-- Q9. Order patients by email ID
+select *
+from patient
+order by email_id desc;
+
+-- Q10. Order patients by mobile number
+select *
+from patient
+order by mobile_number asc;
+
+-- 🔹 LIMIT – 10 Questions with Answers
+-- Q1. Fetch first 5 patients
+select *
+from patient
+order by patient_registration_id asc
+limit 5;
+
+-- Q2. Fetch last 5 patients
+select *
+from patient
+order by patient_name desc
+limit 5;
+
+-- Q3. Fetch first 10 patients
+select *
+from patient
+order by patient_registration_id asc
+limit 10;
+
+-- Q4. Skip first 5 records and fetch next 5
+select *
+from patient
+order by patient_registration_id asc
+limit 5
+offset 5;
+
+-- Q5. Fetch first 3 Male patients
+select *
+from patient
+where gender = "Male"
+order by patient_registration_id asc
+Limit 3;
+
+-- Q6. Fetch first 5 Female patients
+select *
+from patient
+where gender = "Female"
+order by patient_registration_id asc
+Limit 5;
+
+-- Q7. Fetch only one patient record
+select *
+from patient
+limit 1;
+
+-- Q8. Fetch latest 10 born patients
+select *
+from patient
+order by dob desc
+limit 10;
+
+-- Q9. Fetch first 7 patients ordered by name
+select *
+from patient 
+order by patient_name asc
+limit 7;
+
+-- Q10. Fetch last 3 patients
+select *
+from patient
+order by patient_registration_id desc
+limit 3;
+
+-- 🔹 DISTINCT – 10 Questions with Answers
+-- Q1. Fetch distinct patient addresses
+select distinct(address)
+from patient;
+
+-- Q2. Fetch distinct genders
+select distinct(gender)
+from patient;
+
+-- Q3. Fetch distinct email IDs
+select distinct(email_id)
+from patient;
+
+-- Q4. Fetch distinct patient names
+select distinct(patient_name)
+from patient;
+
+-- Q5. Fetch distinct dates of birth
+select distinct(dob)
+from patient;
+
+-- Q6. Fetch distinct address and gender combinations
+select distinct address , gender
+from patient;
+
+-- Q7. Fetch distinct mobile numbers
+select distinct(mobile_number)
+from patient;
+
+-- Q8. Fetch distinct registration IDs
+select distinct(patient_registration_id)
+from patient;
+
+-- Q9. Fetch distinct addresses in sorted order
+select distinct(address)
+from patient
+order by address asc;
+
+-- Q10. Fetch distinct Gmail users
+select distinct(email_id)
+from patient
+order by email_id asc;
 
